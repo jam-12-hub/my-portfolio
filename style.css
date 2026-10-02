@@ -1,0 +1,273 @@
+/* ==========================================================================
+   1. GLOBAL SYSTEM SETUP
+   ========================================================================== */
+html {
+    scroll-behavior: smooth; /* Enables elegant animated smooth scrolling */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0; /* Keeps the top navigation bar flush against the screen edges */
+    padding: 0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth fade when switching themes */
+}
+
+/* Centers and constrains the core portfolio page text content */
+.content-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Spacing parameters out the logical semantic page sections */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   2. TOP NAVIGATION BAR COMPONENT
+   ========================================================================== */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky; /* Optional: keeps the navbar fixed at the top as you scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    color: white;
+    background-color: #555;
+}
+
+.navbar .nav-links a.active {
+    color: white;
+    background-color: #28a745;
+}
+
+/* ==========================================================================
+   3. RESUME PORTFOLIO CARDS
+   ========================================================================== */
+.portfolio-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-left: 5px solid #28a745; /* Clean green accent stripe for school & work */
+}
+
+.portfolio-card h3 {
+    margin-top: 0;
+    color: #111;
+}
+
+/* ==========================================================================
+   4. INTERACTIVE UTILITIES (AUDIO, BUTTONS, & INPUT FIELD)
+   ========================================================================== */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Ambient audio layout box surface */
+.audio-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.audio-container p {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+/* Visitor log signature panel layout layout grid */
+.input-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 500px;
+}
+
+.input-section label {
+    font-weight: bold;
+}
+
+.input-section input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.input-section input[type="text"]:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+/* Submit name accent overrides */
+.input-section .submit-btn {
+    background-color: #28a745;
+    margin-bottom: 0;
+}
+
+.input-section .submit-btn:hover {
+    background-color: #218838;
+}
+
+/* ==========================================================================
+   5. INTERACTIVE DARK THEME SCHEMAS (OVERLAY OVERRIDES)
+   ========================================================================== */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f4f7f6;
+}
+
+body.dark-theme section h2 {
+    color: #fff;
+    border-bottom-color: #444;
+}
+
+/* Convert all white cards and accent borders over into dark variations */
+body.dark-theme .portfolio-card,
+body.dark-theme .audio-container,
+body.dark-theme .input-section {
+    background-color: #2a2a2a;
+    color: #f4f7f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .portfolio-card {
+    border-left-color: #007bff; /* Accent lines shift to clean blue in dark mode */
+}
+
+body.dark-theme .portfolio-card h3,
+body.dark-theme .input-section label {
+    color: #fff;
+}
+
+body.dark-theme .input-section input[type="text"] {
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+/* Clean placement configuration for the navbar mode selector text */
+#theme-toggle-btn {
+    background-color: #555;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #777;
+}
+
+/* ==========================================================================
+   6. MOBILE VIEWPORT RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 600px) {
+    /* Stack the navigation bar links vertically on mobile screens */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Stack input forms cleanly */
+    .input-section {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .input-section input[type="text"] {
+        width: 100%;
+    }
+
+    /* Make sure images do not overflow thin mobile dimensions */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

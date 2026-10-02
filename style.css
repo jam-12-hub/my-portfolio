@@ -271,3 +271,14 @@ body.dark-theme .input-section input[type="text"] {
         height: auto;
     }
 }
+/* PROFILE PICTURE FORMATTING */
+.profile-img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the avatar circular */
+    border: 4px solid #28a745;
+    background-color: #ffffff; /* Adds a solid white background backing for transparent vectors */
+    margin: 20px 0;
+    display: block;
+}

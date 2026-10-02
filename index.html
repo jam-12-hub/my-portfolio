@@ -9,13 +9,15 @@
 </head>
 <body>
 
-    <!-- 1. NAVIGATION BAR WITH DARK MODE TOGGLE -->
+    <!-- 1. NAVIGATION BAR WITH ACTIVE SECTION LINKING -->
     <nav class="navbar">
         <div class="logo">Portfolio</div>
         <ul class="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            <li><a href="https://google.com" target="_blank">Search</a></li>
+            <!-- These href points track matching section IDs down the page -->
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#education">School</a></li>
+            <li><a href="#experience">Work & Projects</a></li>
+            <li><a href="#extras">Media</a></li>
             <!-- Dark mode toggle button triggers toggleDarkMode() inside script.js -->
             <li><button type="button" id="theme-toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button></li>
         </ul>
@@ -24,48 +26,61 @@
     <!-- 2. MAIN PORTFOLIO CONTENT LAYOUT -->
     <main class="content-wrapper">
         
-        <!-- INTRO DUCTION SECTION -->
+        <!-- INTRODUCTION SECTION (TARGETED BY NAVIGATION) -->
         <section id="about">
-            <h1>Hi, I'm [Your Name Here]</h1>
+            <h1>Hi, I'm Alex</h1>
+            
+            <!-- Modern Vector Cartoon Profile Avatar -->
+            <img src="https://dicebear.com" alt="Alex's Avatar Illustration" class="profile-img">
+            
             <p>Welcome to my professional portfolio space. I am a student developer learning to build modern, interactive websites using HTML, CSS, and JavaScript on Windows.</p>
         </section>
 
-        <!-- EDUCATION INFO SECTION -->
+        <!-- EDUCATION INFO SECTION (TARGETED BY NAVIGATION) -->
         <section id="education">
             <h2>School & Academic Profile</h2>
             <div class="portfolio-card">
-                <h3>[Your School/University Name]</h3>
-                <p><strong>Program / Track:</strong> [E.g., High School Diploma / Computer Science Track]</p>
-                <p><strong>Expected Graduation:</strong> [E.g., Class of 2027]</p>
-                <p><strong>Key Focus Areas:</strong> Web design fundamentals, algorithm foundations, and software configurations.</p>
+                <h3>Alliance High School</h3>
+                <p><strong>Program / Track:</strong> KCSE Certificate / Computer Science Track</p>
+                <p><strong>Expected Graduation:</strong> Class of 2027</p>
+                <p><strong>Key Focus Areas:</strong> Web design fundamentals, algorithm foundations, data processing with Python, and software configurations.</p>
             </div>
         </section>
 
-        <!-- WORK & PROJECTS SECTION -->
+        <!-- WORK & PROJECTS SECTION (TARGETED BY NAVIGATION) -->
         <section id="experience">
             <h2>Experience & Project Registry</h2>
+            
             <div class="portfolio-card">
                 <h3>Front-End Portfolio Website</h3>
-                <p>Developed a responsive, interactive landing page from scratch using VS Code and semantic layout components.</p>
+                <p>Developed a responsive, interactive landing page from scratch using VS Code and semantic code management principles.</p>
                 <ul>
                     <li>Integrated an adaptive dark mode theme trigger toggle.</li>
                     <li>Connected structured data models utilizing linked external stylesheets and script engines.</li>
                     <li>Implemented interactive user input verification loops.</li>
                 </ul>
             </div>
+            
+            <div class="portfolio-card">
+                <h3>Python Data Analytics Assistant</h3>
+                <p>Explored data parsing fundamentals using specialized libraries like Matplotlib to generate custom data visuals.</p>
+            </div>
         </section>
 
-        <!-- MULTIMEDIA & CONNECTIONS SECTION -->
+        <!-- MULTIMEDIA & CONNECTIONS SECTION (TARGETED BY NAVIGATION) -->
         <section id="extras">
             <h2>Media & Connection Hub</h2>
+            
             <div class="audio-container">
                 <p>Background focus track:</p>
+                <!-- Secure HTTPS ambient stream track -->
                 <audio controls src="https://google.com"></audio>
             </div>
 
             <div class="input-section">
                 <label for="username-input">Leave a visitor signature:</label>
                 <input type="text" id="username-input" placeholder="Type your name here...">
+                <!-- Submit button triggers greetUser() inside script.js -->
                 <button type="button" class="submit-btn" onclick="greetUser()">Submit Name</button>
             </div>
         </section>
@@ -77,5 +92,3 @@
 
 </body>
 </html>
-
-

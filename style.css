@@ -282,3 +282,38 @@ body.dark-theme .input-section input[type="text"] {
     margin: 20px 0;
     display: block;
 }
+/* PLAYLIST TRACK STYLING RULES */
+.playlist-tracks {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.track-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0; /* Override default button layout gap */
+    transition: background-color 0.2s;
+}
+
+.track-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Ensure playlist track list links match in Dark Theme matrix */
+body.dark-theme .track-btn {
+    background-color: #3a3a3a;
+    color: #f4f7f6;
+}
+
+body.dark-theme .track-btn:hover {
+    background-color: #4a4a4a;
+}

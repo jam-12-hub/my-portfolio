@@ -23,3 +23,14 @@ function toggleDarkMode() {
         toggleButton.innerHTML = "🌙 Dark Mode";
     }
 }
+// Function to handle switching playlist tracks dynamically
+function changeTrack(audioFileName) {
+    // Find the master audio element on the page
+    const player = document.getElementById('master-player');
+    
+    // Swap the source to the new song file name
+    player.src = audioFileName;
+    
+    // Automatically start playing the new song
+    player.play();
+}

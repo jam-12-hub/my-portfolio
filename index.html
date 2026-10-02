@@ -31,7 +31,9 @@
             <h1>Hi, I'm JAMES GITHINJI</h1>
             
             <!-- Modern Vector Cartoon Profile Avatar -->
-            <img src="https://ui-avatars.com" alt="Alex's Avatar" class="profile-img">
+            <!-- Points directly to the image inside your project folder -->
+<img src="profile.png" alt="James's Profile Picture" class="profile-img">
+
 
             
             <p>Welcome to my professional portfolio space. I am a student developer learning to build modern, interactive websites using HTML, CSS, and JavaScript on Windows.</p>
@@ -42,8 +44,8 @@
             <h2>School & Academic Profile</h2>
             <div class="portfolio-card">
                 <h3>THE UNIVERSITY OF NAIROBI</h3>
-                <p><strong>Program / Track:</strong> BSC IN CIVIL ENGINEERING / SOFTWARE ENGINEERING Track</p>
-                <p><strong>Expected Graduation:</strong> FIRST YEAR 2026/2027</p>
+                <p><strong>Program / Track:</strong> BSC IN CIVIL ENGINEERING $ SOFTWARE ENGINEERING </p>
+                <p><strong>Current Year Of Study:</strong> FIRST YEAR 2026/2027</p>
                 <p><strong>Key Focus Areas:</strong> Web design fundamentals, algorithm foundations, data processing with Python, and software configurations.</p>
             </div>
         </section>
@@ -75,8 +77,20 @@
             <div class="audio-container">
                 <p>Background focus track:</p>
                 <!-- Secure HTTPS ambient stream track -->
-    <!-- Points directly to your own music file inside your project folder -->
-<audio controls src="my-track.mp3"></audio>
+            <!-- MULTI-TRACK AUDIO PLAYLIST PLAYBACK ENGINE -->
+        <h3>My Custom Playlist</h3>
+        <div class="audio-container">
+            <!-- The main master audio interface controls -->
+            <audio id="master-player" controls src="song1.mp3"></audio>
+            
+            <p>Select a track to play:</p>
+            <ul class="playlist-tracks">
+                <li><button type="button" class="track-btn" onclick="changeTrack('song1.mp3')">🎵 Track 1: Nobody Badder than I</button></li>
+                <li><button type="button" class="track-btn" onclick="changeTrack('song2.mp3')">🎵 Track 2: Aidonia- Fi Di Jockey</button></li>
+                <li><button type="button" class="track-btn" onclick="changeTrack('song3.mp3')">🎵 Track 3:Ayra Starr- Commas </button></li>
+            </ul>
+        </div>
+
 
             </div>
 
